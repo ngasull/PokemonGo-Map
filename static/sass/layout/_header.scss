@@ -5,40 +5,28 @@
 	}
 
 	#header {
-		background: darken(_palette(accent2, bg), 12);
 		color: _palette(accent2, fg);
 		cursor: default;
 		height: 3.50em;
 		left: 0;
-		line-height: 3.50em;
 		position: fixed;
 		text-align: left;
 		top: 0;
-		width: 100%;
 		z-index: _misc(z-index-base) + 1;
-
-		> h1 {
-			color: _palette(accent2, fg-bold);
-			display: inline-block;
-			height: inherit;
-			line-height: inherit;
-			margin: 0;
-			padding: 0;
-
-			a {
-				font-size: 1.25em;
-			}
-		}
 
 		> a {
 			@include vendor('transition', 'color #{_duration(transition)} ease-in-out');
 			display: inline-block;
-			padding: 0 0.75em;
-			color: inherit;
+			margin: 0.75em;
+			padding: 0.75em;
+			background: #ffffff;
+		    box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px;
+		    color: darken(_palette(accent2, bg), 12);
+			font-size: 0.8em;
 			text-decoration: none;
 
 			&:hover {
-				color: _palette(accent2, fg-bold);
+				color: _palette(accent2, bg);
 			}
 
 			&[href="#nav"] {
