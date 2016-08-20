@@ -26,7 +26,9 @@ class Pogom(Flask):
                                lat=config['ORIGINAL_LATITUDE'],
                                lng=config['ORIGINAL_LONGITUDE'],
                                gmaps_key=config['GMAPS_KEY'],
-                               lang=config['LOCALE'])
+                               lang=config['LOCALE'],
+                               server_select_exclude="[16,17,18,19,21,22,41]",
+                               server_select_notify="[1,2,3,4,5,6,7,8,9,25,26,27,28,29,30,31,32,33,34,36,37,38,40,43,44,45,47,49,50,51,53,56,57,63,64,65,66,67,68,69,70,71,74,75,76,77,78,81,82,83,85,86,87,88,89,90,91,93,94,95,100,101,102,103,104,105,106,110,111,114,115,117,123,126,127,130,131,132,138,139,140,141,142,143,144,145,146,147,148,149,150,151]")
 
     def raw_data(self):
         d = {}

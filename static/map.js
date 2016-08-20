@@ -33,11 +33,14 @@ $.getJSON("static/locales/pokemon." + document.documentElement.lang + ".json").d
     });
 
     // recall saved lists
-    if (localStorage['remember_select_exclude']) {
-        $selectExclude.val(JSON.parse(localStorage.remember_select_exclude)).trigger("change");
+    var exclude = server_select_exclude || localStorage['remember_select_exclude'];
+    var notify = server_select_notify || localStorage['remember_select_notify'];
+
+    if (exclude) {
+        $selectExclude.val(JSON.parse(exclude)).trigger("change");
     }
-    if (localStorage['remember_select_notify']) {
-        $selectNotify.val(JSON.parse(localStorage.remember_select_notify)).trigger("change");
+    if (notify) {
+        $selectNotify.val(JSON.parse(notify)).trigger("change");
     }
 });
 
